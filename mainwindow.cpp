@@ -45,7 +45,7 @@ MainWindow::MainWindow(QWidget *parent)
 
     connect(Player, &QMediaPlayer::playbackStateChanged, this,
             [this](QMediaPlayer::PlaybackState state) {
-                if (state == QMediaPlayer::StoppedState)
+                if (state == QMediaPlayer::StoppedState)  // IF Video completed change icon back to stop
                     ui->pushButton_Play_Pause->setIcon(
                         style()->standardIcon(QStyle::SP_MediaPlay));
             });
@@ -58,6 +58,10 @@ MainWindow::MainWindow(QWidget *parent)
         this->setStyleSheet(styleSheet);
         styleFile.close();
     }
+    connect(Player, &QMediaPlayer::mediaStatusChanged,
+            this, &MainWindow::onMediaStatusChanged);
+    setControlsEnabled(false);
+
 }
 
 MainWindow::~MainWindow()
@@ -227,4 +231,33 @@ void MainWindow::on_pushButton_Seek_Forward_clicked()
 {
     ui->horizontalSlider_Duration->setValue(ui->horizontalSlider_Duration->value() + 20);
     Player->setPosition(ui->horizontalSlider_Duration->value() * 1000);
+}
+void MainWindow::setControlsEnabled(bool enabled)
+{
+    ui->pushButton_Play_Pause->setEnabled(enabled);
+    ui->pushButton_Stop->setEnabled(enabled);
+    ui->pushButton_Seek_Backward->setEnabled(enabled);
+    ui->pushButton_Seek_Forward->setEnabled(enabled);
+    ui->pushButton_Volume->setEnabled(enabled);
+
+    ui->horizontalSlider_Duration->setEnabled(enabled);
+    ui->horizontalSlider_Volume->setEnabled(enabled);
+}
+
+void MainWindow::onMediaStatusChanged(QMediaPlayer::MediaStatus status)
+{
+    switch (status)
+    {
+    case QMediaPlayer::LoadedMedia:
+         setControlsEnabled(true);
+         break;
+
+    case QMediaPlayer::InvalidMedia:
+    case QMediaPlayer::NoMedia:
+         setControlsEnabled(false);
+         break;
+
+    default:
+         break;
+    }
 }
