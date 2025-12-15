@@ -1,0 +1,192 @@
+/* Main Window Styling */
+QMainWindow {
+    background-color: #1e1e1e;
+}
+
+/* Group Box for Video Container */
+QGroupBox {
+    background-color: #000000;
+    border: 2px solid #3a3a3a;
+    border-radius: 8px;
+    margin-top: 10px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+QGroupBox::title {
+    subcontrol-origin: margin;
+    subcontrol-position: top center;
+    padding: 5px 10px;
+    background-color: #2d2d2d;
+    border-radius: 4px;
+}
+
+/* Control Buttons Styling */
+QPushButton {
+    background-color: #2d2d2d;
+    border: 2px solid #3a3a3a;
+    border-radius: 6px;
+    padding: 8px 15px;
+    color: #ffffff;
+    min-width: 50px;
+    min-height: 40px;
+}
+
+QPushButton:hover {
+    background-color: #3a3a3a;
+    border: 2px solid #0d7377;
+}
+
+QPushButton:pressed {
+    background-color: #0d7377;
+    border: 2px solid #14ffec;
+}
+
+QPushButton:disabled {
+    background-color: #1a1a1a;
+    border: 2px solid #2a2a2a;
+    color: #666666;
+}
+
+/* Play/Pause Button Special Styling */
+#pushButton_Play_Pause {
+    background-color: #0d7377;
+    border: 2px solid #14ffec;
+}
+
+#pushButton_Play_Pause:hover {
+    background-color: #14ffec;
+    border: 2px solid #0d7377;
+}
+
+/* Duration Slider (Seek Bar) */
+QSlider::groove:horizontal {
+    background-color: #3a3a3a;
+    height: 8px;
+    border-radius: 4px;
+}
+
+QSlider::handle:horizontal {
+    background-color: #14ffec;
+    width: 18px;
+    height: 18px;
+    margin: -5px 0;
+    border-radius: 9px;
+    border: 2px solid #0d7377;
+}
+
+QSlider::handle:horizontal:hover {
+    background-color: #0d7377;
+    border: 2px solid #14ffec;
+}
+
+QSlider::sub-page:horizontal {
+    background-color: #0d7377;
+    border-radius: 4px;
+}
+
+QSlider::add-page:horizontal {
+    background-color: #2a2a2a;
+    border-radius: 4px;
+}
+
+/* Volume Slider */
+#horizontalSlider_Volume::groove:horizontal {
+    background-color: #3a3a3a;
+    height: 6px;
+    border-radius: 3px;
+}
+
+#horizontalSlider_Volume::handle:horizontal {
+    background-color: #ff6b6b;
+    width: 14px;
+    height: 14px;
+    margin: -4px 0;
+    border-radius: 7px;
+    border: 2px solid #ff4757;
+}
+
+#horizontalSlider_Volume::handle:horizontal:hover {
+    background-color: #ff4757;
+    border: 2px solid #ff6b6b;
+}
+
+#horizontalSlider_Volume::sub-page:horizontal {
+    background-color: #ff6b6b;
+    border-radius: 3px;
+}
+
+/* Time Labels */
+QLabel {
+    color: #ffffff;
+    font-size: 14px;
+    font-family: "Consolas", "Monaco", monospace;
+    background-color: transparent;
+    padding: 2px 5px;
+}
+
+#label_current_Time, #label_Total_Time {
+    color: #14ffec;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+/* Menu Bar Styling */
+QMenuBar {
+    background-color: #2d2d2d;
+    color: #ffffff;
+    border-bottom: 2px solid #3a3a3a;
+}
+
+QMenuBar::item {
+    background-color: transparent;
+    padding: 5px 10px;
+}
+
+QMenuBar::item:selected {
+    background-color: #0d7377;
+}
+
+QMenu {
+    background-color: #2d2d2d;
+    border: 2px solid #3a3a3a;
+    color: #ffffff;
+}
+
+QMenu::item:selected {
+    background-color: #0d7377;
+}
+
+/* Status Bar */
+QStatusBar {
+    background-color: #2d2d2d;
+    color: #ffffff;
+    border-top: 2px solid #3a3a3a;
+}
+
+/* Scroll Bar (if needed) */
+QScrollBar:vertical {
+    background-color: #2d2d2d;
+    width: 12px;
+    border-radius: 6px;
+}
+
+QScrollBar::handle:vertical {
+    background-color: #0d7377;
+    border-radius: 6px;
+    min-height: 20px;
+}
+
+QScrollBar::handle:vertical:hover {
+    background-color: #14ffec;
+}
+
+QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical {
+    height: 0px;
+}
+
+/* Video Widget */
+QVideoWidget {
+    background-color: #000000;
+    border: none;
+}

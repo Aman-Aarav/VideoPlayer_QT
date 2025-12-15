@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/Player"/>
+    <qresource prefix="/">
+        <file>player.qss</file>
+    </qresource>
+</RCC>
