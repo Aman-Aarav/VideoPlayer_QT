@@ -17,6 +17,8 @@ Features
       Robust error handling and edge-case checks
       File validation before playback
 
+<br><br>
+
 
 Technologies Used
 
@@ -26,6 +28,9 @@ Technologies Used
     QAudioOutput (audio handling)
     QVideoWidget (video rendering)
     Qt Widgets
+
+
+<br><br>
 
 
 Supported Media Formats
