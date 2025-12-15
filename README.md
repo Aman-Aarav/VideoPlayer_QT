@@ -1,8 +1,8 @@
 # VideoPlayer_QT
 A Qt 6 based Media Player application built using QMediaPlayer, QAudioOutput, and QVideoWidget. The application supports video playback, audio control, seeking, and basic error handling with a clean UI.
 
+<img width="797" height="573" alt="image" src="https://github.com/user-attachments/assets/279e1ba3-8600-486a-8f5f-f0d159ad2e93" />
 
-<img width="797" height="571" alt="image" src="https://github.com/user-attachments/assets/e6e1af1f-afc7-411a-8200-1666f4abaa8c" />
 
 
 
