@@ -42,6 +42,7 @@ private slots:
 
     void on_pushButton_Seek_Forward_clicked();
     void onMediaError(QMediaPlayer::Error error, const QString &errorString);
+    void onMediaStatusChanged(QMediaPlayer::MediaStatus status);
 
 
 private:
@@ -51,7 +52,7 @@ private:
     qint64 mDuration;
     QAudioOutput *m_audioOutput;
     bool IS_Muted = false;
-    
+     void setControlsEnabled(bool enabled);
     void updateDuration(qint64 Duration);
 };
 #endif // MAINWINDOW_H
